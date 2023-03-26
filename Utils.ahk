@@ -51,7 +51,7 @@ Return
 ^!8::
 Run MultiMonitorTool /disable %Monitor_1_ID% %Monitor_2_ID% %Monitor_4_ID%
 Run MultiMonitorTool /enable %Monitor_3_ID%
-Send {Ctrl down} {Alt down} 5
+Run nircmd setdefaultsounddevice Q80A 1
 Run C:\Users\Giang\AppData\Local\Playnite\Playnite.DesktopApp.exe --startfullscreen
 Return
 
@@ -59,12 +59,12 @@ Return
 
 ; ctrl + alt + 9 for TV mode
 ^!9::
-Send {Ctrl down} {Alt down} 5
-Send {Ctrl down} {Alt down} 3
+Run nircmd setdefaultsounddevice Q80A 1
+Run MultiMonitorTool /SetPrimary %Monitor_3_ID%
 Return
 
 ; ctrl + alt + 0 for PC mode
 ^!0::
-Send {Ctrl down} {Alt down} 6
-Send {Ctrl down} {Alt down} 1
+Run nircmd setdefaultsounddevice Casse 1
+Run MultiMonitorTool /SetPrimary %Monitor_1_ID%
 Return
