@@ -1,4 +1,4 @@
-﻿Script_Path = "F:\Shortcut Windows"
+﻿Script_Path = "C:\Shortcut Windows"
 
 Monitor_1_ID = "MSI3CA8"
 Monitor_2_ID = "AOC2702"
@@ -47,11 +47,12 @@ Run MultiMonitorTool /enable %Monitor_1_ID% %Monitor_2_ID% %Monitor_3_ID% %Monit
 Run MultiMonitorTool /LoadConfig %Script_Path%\allEnabled.cfg
 Return
 
-; ctrl + alt + 8 for advanced TV mode
+; ctrl + alt + 8 for game mode
 ^!8::
 Run MultiMonitorTool /disable %Monitor_1_ID% %Monitor_2_ID% %Monitor_4_ID%
 Run MultiMonitorTool /enable %Monitor_3_ID%
 Send {Ctrl down} {Alt down} 5
+Run C:\Users\Giang\AppData\Local\Playnite\Playnite.DesktopApp.exe --startfullscreen
 Return
 
 
